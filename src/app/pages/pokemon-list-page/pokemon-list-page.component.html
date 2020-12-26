@@ -1,0 +1,22 @@
+<div class="uk-container">
+  <div class="uk-margin-medium-top uk-grid-large uk-child-width-1-1@s" uk-grid >
+    <div>
+      <form class="uk-search uk-search-default">
+        <input type="text" class="uk-input uk-form-large" style="text-align: center;" placeholder="Find your Pokemon here" (keyup)="inputChange($event)"/>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="uk-container">
+  <div class="uk-margin-medium-top uk-grid-large uk-child-width-1-4 @s" uk-grid *ngIf="true" >
+    <div *ngFor="let poke of pokes | myFilter: pokeName | paginate: { itemsPerPage: 20, currentPage: p, totalItems: pokes.length }">
+      <app-pokemon-list-card [poke]="poke" [loaded]="loaded"></app-pokemon-list-card>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container">
+  <div class="uk-margin-medium-top uk-grid-large uk-child-width-1-1@s" uk-grid >
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

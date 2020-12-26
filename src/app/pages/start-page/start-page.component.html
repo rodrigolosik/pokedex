@@ -1,0 +1,22 @@
+<div class="uk-container">
+  <div class="uk-grid-large" uk-grid>
+    <div>
+      <h1>What pokemon are you looking for ?</h1>
+    </div>
+  </div>
+
+  <div class="uk-grid-large uk-child-width-1-1" uk-grid>
+    <div class="uk-margin">
+      <input type="text" class="uk-input">
+    </div>
+  </div>
+
+  <div class="uk-grid-large uk-child-width-1-2@s" uk-grid >
+    <div *ngFor="let option of optionsList">
+      <div [ngClass]="['uk-card uk-card-hover uk-card-body', option.class]">
+        <h3 class="uk-card-title">{{option.title}}</h3>
+        <p>{{option.class}}</p>
+      </div>
+    </div>
+  </div>
+</div>

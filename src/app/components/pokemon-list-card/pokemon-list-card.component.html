@@ -1,0 +1,14 @@
+<div>
+  <div class="uk-card uk-card-default" [routerLink]="['/pokemon', poke.name]">
+      <div class="uk-card-media-top">
+        <img src="{{poke.sprites[1] || poke.sprites[0]}}" alt="{{poke.name}}" width="150" height="150" >
+      </div>
+      <div class="uk-card-body uk-margin-remove uk-padding-small">
+          <p>Nº {{poke.id}} </p>
+          <h3 class="uk-card-title">{{ poke.name | titlecase }}</h3>
+          <p>
+            <span *ngFor="let type of poke.types" [ngClass]="['uk-badge uk-padding-left-medium', type]">{{type | titlecase}}</span>
+          </p>
+      </div>
+  </div>
+</div>

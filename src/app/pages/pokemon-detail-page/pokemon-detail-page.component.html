@@ -1,0 +1,44 @@
+<div class="uk-section uk-section-default uk-preserve-color">
+
+  <div class="uk-container">
+
+      <div class="uk-panel uk-dark uk-margin-medium">
+      </div>
+
+      <div class="uk-grid-match uk-child-width-1-2@m uk-grid-collapse" uk-grid>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body uk-margin-remove">
+                <img src="{{_poke.sprites[1] || _poke.sprites[0]}}" height="300" width="300" alt="{{_poke?.name}}">
+            </div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-card-body">
+                <h1>{{_poke.name | titlecase}}</h1>
+                <p>Number: {{_poke.id}}</p>
+                <p>Heigh: {{_poke.height}} kg</p>
+                <p>weight: {{ _poke.weight }} m</p>
+                <p>
+                  <span *ngFor="let type of _poke.types" [ngClass]="['uk-badge uk-padding-left-medium' , type]">{{type | titlecase }}</span>
+                </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="uk-container">
+        <div class="uk-grid-match uk-child-width-1-2@m uk-grid-collapse" uk-grid>
+          <div>
+            <a [routerLink]="['/pokemon', previousUrl]" class="uk-button uk-button-default"> <span uk-icon="heart"></span> Previous</a>
+          </div>
+          <div>
+            <a [routerLink]="['/pokemon', nextUrl]" class="uk-button uk-button-default">Next</a>
+          </div>
+        </div>
+        <div class="uk-grid-match uk-child-width-1-1@m uk-grid-collapse" uk-grid>
+          <div>
+            <a [routerLink]="['/']" class="uk-button uk-button-secondary">Back to list</a>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.9));
+}
+
+.uk-search { width: 100%;}
+
+.uk-card {
+  /* border-radius: 1em; */
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.uk-form-large {
+  border-radius: 1em;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.uk-badge {
+  padding: 0 20px;
+  border-radius: 0;
+  border: 1px solid #000;
+}
+
+.uk-card-body {
+  background-color: rgba(224, 222, 222, 0.5);
+}
+
+/* Color Types  */
+.grass {
+  background-color: rgba(27, 177, 38, 0.9);
+}
+.fire {
+  background-color: rgba(209, 71, 71, 0.9);
+}
+.water {
+  background-color: rgba(45, 107, 223, 0.9);
+}
+.bug {
+  background-color: rgba(145, 136, 85, 0.9);
+}
+.normal {
+  background-color: rgba(241, 241, 210, 0.9);
+  color: #000;
+}
+.poison {
+  background-color: rgba(151, 66, 207, 0.9);
+}
+.electric {
+  background-color: rgba(226, 223, 46, 0.9);
+  color: #000;
+}
+.psychic {
+  background-color: rgba(230, 59, 192, 0.9);
+}
+.rock {
+  background-color: rgba(156, 150, 144, 0.9);
+}
+.flying {
+  background-color: rgba(107, 154, 241, 0.9);
+}
+.ground {
+  background-color: rgba(206, 153, 118, 0.9);
+}
+.fairy {
+  background-color: rgba(231, 158, 219, 0.9);
+  color: #000;
+}
