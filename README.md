@@ -1,4 +1,4 @@
-This is a simple Angular application developed using a public Pokemon API.
+This is a simple Angular application developed using a public Pokemon API - https://pokeapi.co/.
 
 To run this project, you just need to:
 1. clone this repo;
